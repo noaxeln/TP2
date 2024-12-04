@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilal Coulibaly</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Menu -->
+    <nav id="menu">
+      <!-- naviguer sur les differentes sections de la page -->
+      <a href="#accueil">Accueil</a>
+      <a href="#video">Vidéo</a>
+      <a href="#formulaire">Formulaire</a>
+      <a href="#tableau">Tableau</a>
+      <a href="#articles">Articles</a>
+      <!-- galerie d'image à la suite du menu  -->
+      <img src="images/bilal8.jpg" alt="image" />
+      <img src="images/bilal9.jpg" alt="image" />
+      <img src="images/bilal10.jpg" alt="image" />
+    </nav>
+    <!-- conteneur global qui contient tout sauf le menu -->
+    <div id="global">
+      <!-- section de l'accueil en haut de la page -->
+      <header id="accueil">
+        <!-- texte écrit à gauche -->
+        <div id="left-text">
+          <p>TP2 -Automne 2024</p>
+          <p>Noa Petit-Phar</p>
+        </div>
+        <!-- texte principal au centre -->
+        <div id="title-centre">
+          <h1>Bilal Coulibaly</h1>
+        </div>
+        <!-- texte à droite -->
+        <div id="right-text">
+          <p id="tim">Techniques d’intégration multimédia</p>
+          <p id="college">Collège de Maisonneuve</p>
+          <p id="github">Adresse de la Github-page</p>
+        </div>
+      </header>
+      <!-- gros conteneur avec toutes les sections -->
+      <div id="cont">
+        <!-- conteneur qui contient toutes les sections au centre -->
+        <div id="cont1">
+          <!-- Section Vidéo -->
+          <div id="video">
+            <!-- titre -->
+            <div>
+              <h1>Highlight de Bilal :</h1>
+              <!-- texte avec classe p pour aligner au centre -->
+              <p class="p">
+                compilation de ses meilleures actions pendant la saison
+                2023-2024.
+              </p>
+            </div>
+            <!-- sauter une ligne -->
+            <br />
+            <!-- importation de la vidéo -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/QnyvKGUIIGI?si=Cn0BMoYrBZ5P2wJI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- Section Formulaire -->
+          <div id="formulaire">
+            <!-- titre -->
+            <h1>Formulaire pour rejoindre son club de basket:</h1>
+            <!-- traiter les informations avec php -->
+            <form action="traiter_form.php">
+              <!-- premier element input -->
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required />
+              <!-- deuxieme element input -->
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required />
+              <!-- troisieme element input -->
+              <label for="age">Âge</label>
+              <!-- avec seuulement des bnombres -->
+              <input type="number" id="age" name="age" required />
+              <!-- element select -->
+              <label for="position">Position</label>
+              <select id="position" name="position">
+                <option value="meneur">Meneur</option>
+                <option value="arrière">Arrière</option>
+                <option value="ailier">Ailier</option>
+                <option value="ailier-fort">Ailier-fort</option>
+                <option value="pivot">Pivot</option>
+              </select>
+              <!-- bouton soumettre et réinitialiser -->
+              <button type="reset">Réinitialiser</button>
+              <button type="submit">Soumettre</button>
+            </form>
+          </div>
+
+          <!-- Section Tableau -->
+          <div id="tableau">
+            <!-- titre -->
+            <h1>Tableau des statistiques de son équipe:</h1>
+            <table>
+              <!-- titre des colonnes -->
+              <tr>
+                <th>Joueur</th>
+                <th>Min</th>
+                <th>Pts</th>
+                <th>Ast</th>
+                <th>Reb</th>
+                <th>Stl</th>
+                <th>blk</th>
+              </tr>
+              <!-- informations -->
+              <tr>
+                <td>Jordan Poole</td>
+                <td>29.9</td>
+                <td>20.3</td>
+                <td>4.7</td>
+                <td>2.1</td>
+                <td>1.9</td>
+                <td>0.5</td>
+              </tr>
+              <tr>
+                <td>Kyle Kuzma</td>
+                <td>27.4</td>
+                <td>15.8</td>
+                <td>1.8</td>
+                <td>5.6</td>
+                <td>0.4</td>
+                <td>0.3</td>
+              </tr>
+              <tr>
+                <td>Bilal Coulibaly</td>
+                <td>35</td>
+                <td>13.2</td>
+                <td>2.9</td>
+                <td>5.6</td>
+                <td>1.3</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>Malcolm Brogdon</td>
+                <td>22.8</td>
+                <td>12.2</td>
+                <td>2.8</td>
+                <td>3.5</td>
+                <td>0.7</td>
+                <td>0.2</td>
+              </tr>
+              <tr>
+                <td>Jonas Valanciunas</td>
+                <td>19.2</td>
+                <td>11.8</td>
+                <td>2.1</td>
+                <td>7.6</td>
+                <td>0.4</td>
+                <td>0.7</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Section Articles -->
+          <div id="articles">
+            <!-- titre -->
+            <h1>Carrière de Bilal</h1>
+            <!-- premier article -->
+            <div>
+              <!-- sous-titre -->
+              <h3>Wizards de Washington (depuis 2023)</h3>
+              <br />
+              <!-- texte avec la classe p pour aligner au centre -->
+              <p class="p">
+                Il est sélectionné en 7e position par les Pacers de l'Indiana,
+                qui l'envoient dans la foulée vers les Wizards de Washington
+                lors de la draft 2023. Il devient le deuxième Français le plus
+                haut drafté de l'histoire en NBA à égalité avec Killian Hayes.
+                En octobre 2023, Bilal Coulibaly devient, à 19 ans, 3 mois et 96
+                jours, le plus jeune joueur de l'histoire des Wizards à être
+                titulaire13. Coulibaly réalise de bonnes performances pour sa
+                première saison. Will Dawkins, le nouveau General Manager des
+                Wizards de Washington confie qu’il compte sur le Français pour
+                le futur de la franchise. Il le félicite pour son
+                professionnalisme et pour son état d’esprit, il déclare même : «
+                Nous sommes satisfaits des temps de passage de Bilal ». Malgré
+                son jeune âge, le rookie progresse tout autant sur le plan
+                défensif qu’offensif lors de sa première saison
+                outre-Atlantique14. En octobre 2024 et après trois matchs
+                aboutis dans la nouvelle saison aussi bien offensivement (16
+                points de moyenne) que défensivement, les Wizards activent
+                l'option d'une année supplémentaire, qui le lie à la franchise
+                jusqu'en 202615. Lors de la rencontre suivante, il réussit sa
+                meilleure prestation avec les Wizards avec 27 points (11/14 aux
+                tirs), 9 rebonds, 3 interceptions et 1 contre16.
+              </p>
+            </div>
+            <!-- deuxieme article -->
+            <div>
+              <br />
+              <!-- sous-titre -->
+              <h3>Équipe de France</h3>
+              <br />
+              <!-- texte -->
+              <p class="p">
+                Jeunes: En juillet et août 2022, il est appelé pour la première
+                fois en sélection nationale dans les catégories jeunes. Il
+                participe au championnat d'Europe des moins de 18 ans. Il marque
+                54 points en 7 matchs et les Bleuets terminent à la 5e place17.
+                <br />
+                Sénior: Il fait partie des de l'équipe qui obtient la médaille
+                d'argent au Jeux olympiques 202418 (défaite en finale face aux
+                Etats-Unis).
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Section Galerie d'Images -->
+        <div id="galerie">
+          <!-- 7 images -->
+          <img src="images/bilal1.jpg" alt="Image 1" />
+          <img src="images/bilal5.jpg" alt="Image 2" />
+          <img src="images/bilal3.jpg" alt="Image 3" />
+          <img src="images/bilal4.jpg" alt="Image 4" />
+          <img src="images/bilal2.jpg" alt="Image 5" />
+          <img src="images/bilal6.jpg" alt="Image 6" />
+          <img src="images/bilal7.jpg" alt="Image 7" />
+        </div>
+      </div>
+      <!-- footer -->
+      <footer id="footer">
+        <br />
+        <!-- adresse -->
+        <h4>3800 R.Sherbrooke E, Montréal, QC H1X 2A2, Canada</h4>
+        <!-- liens -->
+        <h4>Liens:</h4>
+        <img src="images/facebook_logo.png" alt="facebook" />
+        <img src="images/instagram_logo.png" alt="instagram" />
+        <img src="images/youtube_logo.png" alt="youtube" />
+        <!-- privacy notice -->
+        <h4>Politique de confidentialité</h4>
+        <br />
+      </footer>
+    </div>
+  </body>
+</html>

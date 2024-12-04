@@ -1,0 +1,266 @@
+/* enlever padding et margin par defaut */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* technique flexbox pour toute la page */
+body {
+  font-family: Arial, sans-serif; /*police pour la page*/
+  background-color: #5dbbf1; /*couleur de fond*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/* tout les titres h1 sont au centre et ont de l'espace en bas */
+ h1{
+  padding-bottom: 25px;
+  text-align: center;
+ }
+/* tout les elements avec la classe p sont au centre */
+ .p{
+  text-align: center;
+ }
+ /* technique flexbox pour l'accueil */
+#accueil {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #333;
+  color: white; /*texte écrit en blanc*/
+}
+#accueil h1 {
+  padding-left: 100px;
+  font-size: 60px;/*taille de la police*/
+  font-weight: bold;/* texte en gras*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;/*police pour le titre*/
+}
+/* espacer le texte de la gauche et le haut de la page */
+#left-text {
+  font-size: 14px; /*taille du texte*/
+  color: white;
+  padding-left: 225px;
+  padding-top: 15px;
+}
+/* police et espacement pour le texte */
+#left-text p {
+  margin: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* pareil que pour le texte de gauche mais on espace avec la droite */
+#right-text p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 3px;
+}
+#right-text {
+  font-size: 14px;
+  color: white;
+  padding-top: 15px;
+}
+/* espacement en fonction de la longueur du texte */
+#tim {
+  padding-right: 25px;
+}
+#college {
+  padding-left: 85px;
+}
+#github {
+  padding-left: 67px;
+}
+
+
+#title-centre {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: transform 0.3s; /*l'animation pour la transformation se fera en 0.3sec*/
+}
+/*quand on passe la souris sur le titre une animation se fait*/
+#title-centre:hover {
+  transform: scale(1.15);/*change taille*/
+  color: #5dbbf1;/*change couleur*/
+}
+
+#menu {
+  font-weight: bold;
+  text-align: center;
+  /* texte espacer avec le haut de la page */
+  padding-top: 1%;
+  /* largeur pour le menu */
+  width: 200px;
+  position: fixed;/*le menu est toujours présent sur la page*/
+  /*position*/
+  top: 0;
+  left: 0;
+  /* il prend toute la hauteur */
+  height: 100%;
+  /* couleur pour le menu */
+  background-color: #333;
+
+}
+
+#menu a {
+  color: white;
+  /*enlever decoration(soulignement)*/
+  text-decoration: none;
+  /* pour que le menu soit en colonne */
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  transition: transform 0.3s;
+}
+/* transformation sur les éléments du menu */
+#menu a:hover {
+  background-color: #444;
+  transform: scale(1.15);
+}
+/*etat actif*/
+#menu a:active{
+  color: #000000;
+}
+/* image sous le menu */
+#menu img {
+  width: 60%;
+  height: auto;
+  /* bord arrondi */
+  border-radius: 8px;
+  transition: transform 0.3s;
+  padding-left: 8%;
+  padding-top: 10%;
+}
+/* image grossis quand on la survole */
+#menu img:hover {
+  transform: scale(1.25);
+}
+ 
+/* technique flexbox pour le conteneur */
+#cont {
+  /* espacer à gauche car il y a le menu */
+  margin-left: 220px;
+  padding: 20px;
+  width: 83%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+/* technique flexbox */
+#cont1 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* technique flexbox pour la galerie */
+#galerie {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 200px;
+}
+
+#galerie img {
+    /* taille des images */
+  width: 100%;
+  height: auto;
+  /* espace entre elles */
+  padding-top: 25px;
+  transition: transform 0.3s;
+}
+/* transformation en survol */
+#galerie img:hover {
+  transform: scale(1.15);
+}
+ /* technique flexbox */
+#video {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+/* taille de la vidéo */
+#video iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* espacement entre les éléments principaux */
+#video,
+#formulaire,
+#tableau,
+#articles {
+  margin-top: 50px;
+  margin-bottom: 75px;
+  width: 100%;
+}
+/* tailles des cases et espacement pour le formulaire */
+#formulaire form {
+  display: grid;/* pour que les éléments soient à la ligne*/
+  gap: 10px;/* espace entre les cases*/
+  grid-template-columns: 1fr 1fr; /*mise en forme*/
+  width: 100%;
+  margin: 0 auto;
+}
+/* taille du texte dans les cases */
+#formulaire input,
+#formulaire select,
+#formulaire button {
+  padding: 10px;
+  font-size: 16px;
+
+}
+/* couleur des cases label */
+label{
+  padding-top: 15px;
+  text-align: center;
+  background-color: #363636;
+  color: white;
+}
+/* couleur ligne tableau */
+tr:nth-child(even) {
+  background-color: rgb(149, 148, 148);
+}
+tr:nth-child(odd) {
+  background-color: rgb(201, 201, 201);
+}
+/* taille tableau */
+#tableau table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* aligner le texte au centre */
+#tableau th,
+#tableau td {
+  padding: 10px;
+  text-align: center;
+}
+/* couleur des cases titres du tableau */
+#tableau th {
+  background-color: #4c82af;
+  color: rgb(0, 0, 0);
+}
+/* technique flexbox articles */
+#articles {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+/* footer */
+footer {
+  background-color: black;
+  color: white;
+  padding-left: 200px;
+  text-align: center;
+}
